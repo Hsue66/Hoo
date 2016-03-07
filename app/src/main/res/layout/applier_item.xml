@@ -21,7 +21,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <TextView
+                <com.ourincheon.wazap.NotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="지원자"
@@ -49,7 +49,7 @@
                 android:id="@+id/aPBtn"
                 android:layout_weight="1"
                 android:layout_gravity="center"
-                android:background="@drawable/require_info_button"
+                android:background="@drawable/profile_button"
                 android:layout_marginRight="15.67dp"
                 android:layout_marginTop="5dp" />
             <Button
@@ -59,7 +59,7 @@
                 android:id="@+id/aABtn"
                 android:layout_weight="1"
                 android:layout_gravity="center"
-                android:background="@drawable/require_info_button"
+                android:background="@drawable/accept_button_off"
                 android:layout_marginRight="15.67dp"
                 android:layout_marginTop="5dp" />
         </LinearLayout>

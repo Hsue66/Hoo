@@ -18,7 +18,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="41dp" />
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/leaderTxt"
@@ -38,7 +38,7 @@
         android:layout_below="@+id/leaderTxt"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="명칭 및 주관"
@@ -61,7 +61,7 @@
         android:layout_alignEnd="@+id/reTitle"
         android:id="@+id/reHost" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="카테고리"

@@ -62,14 +62,15 @@ public interface WazapService {
     // 메인목록 받아오기
     @GET("contests")
     Call<Contests> getContests(
-            @Query("start_id") int start_id,
+            @Query("access_token") String access_token,
             @Query("amount") int amount
     );
 
     // 상세 정보 받아오기
     @GET("contests/{contest_id}")
     Call<reqContest> getConInfo(
-            @Path("contest_id") String contest_id
+            @Path("contest_id") String contest_id,
+            @Query("access_token") String access_token
     );
 
     // 모집글 신청

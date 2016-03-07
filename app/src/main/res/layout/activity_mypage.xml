@@ -76,7 +76,7 @@
         android:layout_alignRight="@+id/eIntro"
         android:layout_alignEnd="@+id/eIntro" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:drawableLeft="@drawable/star"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
@@ -99,7 +99,7 @@
         android:layout_below="@+id/textView8"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:paddingLeft="25dp"
         android:layout_width="180dp"
         android:layout_height="wrap_content"

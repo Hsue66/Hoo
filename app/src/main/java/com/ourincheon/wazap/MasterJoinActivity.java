@@ -60,12 +60,13 @@ public class MasterJoinActivity extends AppCompatActivity {
         jDate = (TextView) findViewById(R.id.jmDate);
         jHost = (TextView) findViewById(R.id.jmHost);
 
-        Intent intent = getIntent();
-        num =  intent.getExtras().getString("id");
-        loadPage(num);
 
         SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
         access_token = pref.getString("access_token", "");
+
+        Intent intent = getIntent();
+        num =  intent.getExtras().getString("id");
+        loadPage(num);
 
 
         deleteD = new AlertDialog.Builder(this);
@@ -73,7 +74,7 @@ public class MasterJoinActivity extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                     endContest();
+                        endContest();
                     }
                 }).setNegativeButton("취소",
                 new DialogInterface.OnClickListener() {
@@ -248,7 +249,7 @@ public class MasterJoinActivity extends AppCompatActivity {
 
         WazapService service = retrofit.create(WazapService.class);
 
-        Call<reqContest> call = service.getConInfo(num);
+        Call<reqContest> call = service.getConInfo(num,access_token);
         call.enqueue(new Callback<reqContest>() {
             @Override
             public void onResponse(Response<reqContest> response) {
@@ -282,6 +283,7 @@ public class MasterJoinActivity extends AppCompatActivity {
                     contestData.setCover(contest.getData().getCover());
                     contestData.setHosts(contest.getData().getHosts());
                     contestData.setContests_id(contest.getData().getContests_id());
+                    contestData.setPeriod(parts[0]);
 
                 } else if (response.isSuccess()) {
                     Log.d("Response Body isNull", response.message());

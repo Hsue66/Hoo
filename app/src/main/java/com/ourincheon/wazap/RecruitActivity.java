@@ -40,7 +40,7 @@ import retrofit2.Retrofit;
 
 public class RecruitActivity extends AppCompatActivity {
 
-    EditText reTitle, reHost, eNum, erIntro;
+    EditText reTitle, reHost, reNum, reIntro, reDate;
     TextView save;
     ImageView profileImg;
     String thumbnail;
@@ -52,25 +52,21 @@ public class RecruitActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recruit);
-
-        TextView nickname = (TextView) findViewById(R.id.leaderTxt);
+        setContentView(R.layout.activity_recruit_new);
 
         SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
-        nickname.setText(pref.getString("name",""));
+
         access_token = pref.getString("access_token", "");
         contest2 = new ContestInfo();
         contest2.setAccess_token(access_token);
 
         reTitle = (EditText) findViewById(R.id.reTitle);
         reHost = (EditText) findViewById(R.id.reHost);
-        eNum = (EditText) findViewById(R.id.eNum);
-        erIntro = (EditText) findViewById(R.id.erIntro);
+        reNum = (EditText) findViewById(R.id.reNum);
+        reDate = (EditText) findViewById(R.id.reDate);
+        reIntro = (EditText) findViewById(R.id.reIntro);
 
-        profileImg = (ImageView)findViewById(R.id.Pro);
-        thumbnail = pref.getString("profile_img","");
-        ThumbnailImage thumb = new ThumbnailImage(thumbnail, profileImg);
-        thumb.execute();
+
 
         Intent intent = getIntent();
         mode = intent.getExtras().getInt("edit");
@@ -80,23 +76,25 @@ public class RecruitActivity extends AppCompatActivity {
             reTitle.setText(con.getTitle());
             System.out.println(con.getTitle());
             reHost.setText(con.getHosts());
-            eNum.setText(String.valueOf(con.getRecruitment()));
-            erIntro.setText(con.getCover());
+            reNum.setText(String.valueOf(con.getRecruitment()));
+            reDate.setText(con.getPeriod());
+            reIntro.setText(con.getCover());
             contest_id = con.getContests_id();
         }
 
-        save = (TextView) findViewById(R.id.textView12);
+        save = (TextView) findViewById(R.id.reButton);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(getApplicationContext(), "adshf;aksdf", Toast.LENGTH_SHORT).show();
                 contest2.setTitle(reTitle.getText().toString());
-                contest2.setRecruitment(Integer.parseInt(eNum.getText().toString()));
+                contest2.setRecruitment(Integer.parseInt(reNum.getText().toString()));
                 contest2.setHosts(reHost.getText().toString());
-                contest2.setCover(erIntro.getText().toString());
+                contest2.setCover(reIntro.getText().toString());
 
                 contest2.setCategories("논문/학술");
-                contest2.setPeriod("2016-04-29");
+                contest2.setPeriod(reDate.getText().toString());
+                //contest2.setPeriod("2016-04-29");
                 contest2.setPositions("기획자");
 
                 if(mode == 0)

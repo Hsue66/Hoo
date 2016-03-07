@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,15 +39,28 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.title.setText(item.getTitle());
         holder.name.setText(item.getName());
         holder.text.setText(item.getText());
-        holder.recruit.setText(" / "+String.valueOf(item.getRecruit()));
+        holder.recruit.setText(" / " + String.valueOf(item.getRecruit()));
         holder.member.setText(String.valueOf(item.getMember()));
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Toast.makeText(context, item.getTitle() + " " + position, Toast.LENGTH_SHORT).show();
+                // Toast.makeText(context, item.getTitle() + " " + position, Toast.LENGTH_SHORT).show();
 
             }
         });
+        if(item.getClip()==0)
+            holder.heart.setBackgroundResource(R.drawable.heart1);
+        else
+            holder.heart.setBackgroundResource(R.drawable.heart2);
+
+        /*holder.heart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, item.getClip() + " " + position, Toast.LENGTH_SHORT).show();
+            }
+        });
+        */
+
     }
 
     @Override
@@ -58,6 +72,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         TextView title, text, name,recruit, member;
         CardView cardview;
+        Button heart;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -67,6 +82,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             recruit = (TextView) itemView.findViewById(R.id.recruit);
             member = (TextView) itemView.findViewById(R.id.member);
             cardview = (CardView) itemView.findViewById(R.id.cardView);
+            heart = (Button) itemView.findViewById(R.id.hbutton);
         }
     }
 }

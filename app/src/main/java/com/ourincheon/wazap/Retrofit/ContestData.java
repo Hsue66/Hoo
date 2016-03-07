@@ -24,10 +24,19 @@ public class ContestData  implements Serializable {
     int clips;
     int views;
     int is_finish;
+    int is_clip;
 
     public ContestData(){}
     public int getIs_finish() {
         return is_finish;
+    }
+
+    public int getIs_clip() {
+        return is_clip;
+    }
+
+    public void setIs_clip(int is_clip) {
+        this.is_clip = is_clip;
     }
 
     public void setIs_finish(int is_finish) {

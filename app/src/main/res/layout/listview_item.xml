@@ -17,7 +17,7 @@
         android:layout_marginLeft="5dp"
         android:orientation="vertical" >
 
-        <TextView
+        <com.ourincheon.wazap.NotoTextView
             android:id="@+id/mText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             />
 
-        <TextView
+        <com.ourincheon.wazap.NotoTextView
             android:id="@+id/mDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

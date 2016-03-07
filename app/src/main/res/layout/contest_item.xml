@@ -21,7 +21,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <TextView
+                <com.ourincheon.wazap.NotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="D - 52"
@@ -31,7 +31,7 @@
                     android:layout_marginTop="12.33dp"
                     android:textColor="#0057ff" />
 
-                <TextView
+                <com.ourincheon.wazap.NotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="[서울] 한화생명"
@@ -46,7 +46,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TextView
+                    <com.ourincheon.wazap.NotoTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="모집인원 5명"
@@ -57,7 +57,7 @@
                         android:layout_marginRight="6dp"
                         android:textSize="13dp" />
 
-                    <TextView
+                    <com.ourincheon.wazap.NotoTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="|"
@@ -66,7 +66,7 @@
                         android:layout_marginBottom="17.33dp"
                         android:textSize="11dp" />
 
-                    <TextView
+                    <com.ourincheon.wazap.NotoTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="신청인원 12명"
@@ -77,7 +77,7 @@
                         android:layout_marginRight="6dp"
                         android:layout_marginLeft="6dp" />
 
-                    <TextView
+                    <com.ourincheon.wazap.NotoTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="|"
@@ -86,7 +86,7 @@
                         android:layout_marginBottom="17.33dp"
                         android:textSize="11dp" />
 
-                    <TextView
+                    <com.ourincheon.wazap.NotoTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="확정인원 2명"

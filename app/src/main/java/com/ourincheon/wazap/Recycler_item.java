@@ -10,6 +10,7 @@ public class Recycler_item {
     private String name;
     private int recruit;
     private int member;
+    private int clip;
 
 
     String getTitle(){
@@ -31,11 +32,16 @@ public class Recycler_item {
         return member;
     }
 
-    Recycler_item(String title, String text, String name, int recruit,int member){
+    public int getClip() {
+        return clip;
+    }
+
+    Recycler_item(String title, String text, String name, int recruit,int member,int clip){
         this.title=title;
         this.text=text;
         this.name=name;
         this.recruit = recruit;
         this.member = member;
+        this.clip = clip;
     }
 }

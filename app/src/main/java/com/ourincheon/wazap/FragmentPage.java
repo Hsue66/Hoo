@@ -51,6 +51,7 @@ public class FragmentPage extends Fragment {
     Recycler_item[] item;
     String[] id_list,writer_list;
     Intent Joininfo;
+    String access_token;
 
     public static FragmentPage newInstance(int position) {
         FragmentPage f = new FragmentPage();
@@ -76,15 +77,22 @@ public class FragmentPage extends Fragment {
                 content.setHasFixedSize(true);
                 content.setLayoutManager(layoutManager);
 
-                items = new ArrayList<>();
-                loadPage();
 
                 SharedPreferences pref = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
-                final String user_id = pref.getString("user_id","");
+                final String user_id = pref.getString("user_id", "");
+                System.out.println(user_id);
+                String access_token = pref.getString("access_token","");
+
+                items = new ArrayList<>();
+                loadPage(access_token);
+
+
                 content.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), content, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
 
+                        System.out.println("###########################################"+writer_list[position]);
+                        System.out.println("###########################################"+user_id);
                         if(writer_list[position].equals(user_id))
                             Joininfo = new Intent(getActivity(), MasterJoinActivity.class);
                         else
@@ -175,7 +183,7 @@ public class FragmentPage extends Fragment {
         super.onActivityCreated(savedInstanceState);
     }
 
-    void loadPage()
+    void loadPage(String access_token)
     {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://come.n.get.us.to/")
@@ -185,7 +193,8 @@ public class FragmentPage extends Fragment {
         WazapService service = retrofit.create(WazapService.class);
 
 
-        Call<Contests> call = service.getContests(300,300);
+        System.out.println("------------------------"+access_token);
+        Call<Contests> call = service.getContests(access_token, 300);
         call.enqueue(new Callback<Contests>() {
             @Override
             public void onResponse(Response<Contests> response) {
@@ -217,7 +226,8 @@ public class FragmentPage extends Fragment {
                             item[i] = new Recycler_item(jsonArr.getJSONObject(i).getString("title"),
                                     jsonArr.getJSONObject(i).getString("hosts"), jsonArr.getJSONObject(i).getString("username"),
                                     Integer.parseInt(jsonArr.getJSONObject(i).getString("recruitment")),
-                                    Integer.parseInt(jsonArr.getJSONObject(i).getString("members"))
+                                    Integer.parseInt(jsonArr.getJSONObject(i).getString("members")),
+                                    Integer.parseInt(jsonArr.getJSONObject(i).getString("is_clip"))
                             );
                             items.add(item[i]);
                             //

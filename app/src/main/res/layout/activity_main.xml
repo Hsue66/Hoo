@@ -52,57 +52,57 @@
                         android:id="@+id/tabs"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:tabMode="fixed"
-                        app:tabGravity="fill"
+                        android:background="#ffffff"
                         android:backgroundTint="#FFA07A"
-                        android:background="#ffffff"/>
+                        app:tabGravity="fill"
+                        app:tabMode="fixed" />
                 </android.support.design.widget.AppBarLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
                     android:layout_marginTop="4dp"
                     android:background="@drawable/xml_border"
-                    android:layout_marginRight="4dp">
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="카테고리"
+                    <com.ourincheon.wazap.NotoTextView
                         android:id="@+id/textView38"
-                        android:textColor="#FFD2D2D2"
-                        android:layout_marginLeft="50dp" />
-
-                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="|"
+                        android:layout_marginLeft="50dp"
+                        android:text="카테고리"
+                        android:textColor="#FFD2D2D2" />
+
+                    <com.ourincheon.wazap.NotoTextView
                         android:id="@+id/divider11"
-                        android:textColor="#FFD2D2D2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
+                        android:text="|"
+                        android:textColor="#FFD2D2D2"
                         android:textSize="10dp" />
 
-                    <TextView
+                    <com.ourincheon.wazap.NotoTextView
+                        android:id="@+id/textView39"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="New Text"
-                        android:id="@+id/textView39"
                         android:layout_marginLeft="65dp"
-                        android:textColor="#FFD2D2D2"/>
+                        android:text="New Text"
+                        android:textColor="#FFD2D2D2" />
 
                     <Spinner
+                        android:id="@+id/spinner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/spinner"
                         android:layout_marginLeft="10dp" />
                 </LinearLayout>
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/viewpager"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
         </RelativeLayout>
@@ -112,19 +112,65 @@
             android:layout_width="62dp"
             android:layout_height="63dp"
             android:layout_gravity="bottom|end"
-            android:layout_marginRight="23.33dp"
             android:layout_marginBottom="16dp"
+            android:layout_marginRight="23.33dp"
             android:src="@drawable/writing_icon_noncircle" />
 
     </android.support.design.widget.CoordinatorLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
-        android:layout_width="304dp"
+        android:layout_width="212.67dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:menu="@menu/activity_nevigation_drawer">
+        android:background="#ffffff"
+        android:fitsSystemWindows="true">
+
+        <Button
+            android:id="@+id/side_button1"
+            android:layout_width="106dp"
+            android:layout_height="13.67dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="350dp"
+            android:background="@drawable/side_menu1" />
+
+        <Button
+            android:id="@+id/side_button2"
+            android:layout_width="106dp"
+            android:layout_height="14.67dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="390dp"
+            android:background="@drawable/side_menu2" />
+
+        <Button
+            android:id="@+id/side_button3"
+            android:layout_width="106dp"
+            android:layout_height="13.67dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="430dp"
+            android:background="@drawable/side_menu3" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="60dp">
+
+            <ImageView
+                android:layout_width="26.33dp"
+                android:layout_height="26.33dp"
+                android:layout_marginRight="13.67dp"
+                android:src="@drawable/alarm" />
+
+            <ImageView
+                android:layout_width="26.33dp"
+                android:layout_height="26.33dp"
+                android:layout_marginLeft="13.67dp"
+                android:src="@drawable/setting" />
+
+
+        </LinearLayout>
+
 
     </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>

@@ -14,7 +14,10 @@
         card_view:cardCornerRadius="3dp"
         android:layout_marginLeft="4dp"
         android:layout_marginTop="4dp"
-        android:layout_marginRight="4dp">
+        android:layout_marginRight="4dp"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardElevation="0.5sp"
+        card_view:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,7 +37,7 @@
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <com.ourincheon.wazap.NotoTextView
                         android:id="@+id/member"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -44,7 +47,7 @@
                         android:textColor="#0057ff"
                         android:textSize="44dp" />
 
-                    <TextView
+                    <com.ourincheon.wazap.NotoTextView
                         android:id="@+id/recruit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -65,7 +68,7 @@
 
                 </LinearLayout>
 
-                <TextView
+                <com.ourincheon.wazap.NotoTextView
                     android:id="@+id/textView32"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -95,7 +98,7 @@
                         android:layout_marginRight="8.33dp"
                         android:layout_marginTop="2dp" />
 
-                    <TextView
+                    <com.ourincheon.wazap.NotoTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="디자인"
@@ -104,7 +107,7 @@
                         android:textColor="#0057ff" />
                 </LinearLayout>
 
-                <TextView
+                <com.ourincheon.wazap.NotoTextView
                     android:id="@+id/title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -128,7 +131,7 @@
                         android:layout_marginRight="7.67dp"
                         android:layout_marginTop="2dp" />
 
-                    <TextView
+                    <com.ourincheon.wazap.NotoTextView
                         android:id="@+id/text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -151,7 +154,7 @@
                         android:layout_marginRight="8.33dp"
                         android:layout_marginTop="5dp" />
 
-                    <TextView
+                    <com.ourincheon.wazap.NotoTextView
                         android:id="@+id/loc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -168,7 +171,7 @@
                         android:layout_marginLeft="18dp"
                         android:layout_marginTop="5dp" />
 
-                    <TextView
+                    <com.ourincheon.wazap.NotoTextView
                         android:id="@+id/name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -185,13 +188,13 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button4"
+                    android:id="@+id/hbutton"
                     android:layout_width="26.67dp"
                     android:layout_height="24.67dp"
                     android:layout_marginTop="38dp"
                     android:layout_gravity="right"
                     android:layout_marginRight="11.67dp"
-                    android:background="@drawable/heart2"/>
+                    android:background="@drawable/heart1"/>
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>

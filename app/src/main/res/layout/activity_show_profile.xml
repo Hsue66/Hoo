@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ourincheon.wazap.MypageActivity">
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:textSize="20dp"
@@ -20,7 +20,7 @@
         android:layout_alignLeft="@+id/pIntro"
         android:layout_alignStart="@+id/pIntro" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:textSize="20dp"
@@ -31,7 +31,7 @@
         android:layout_alignLeft="@+id/pName"
         android:layout_alignStart="@+id/pName" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:textSize="20dp"
@@ -42,7 +42,7 @@
         android:layout_alignLeft="@+id/pMajor"
         android:layout_alignStart="@+id/pMajor" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:textSize="20dp"
@@ -53,7 +53,7 @@
         android:layout_alignLeft="@+id/pUniv"
         android:layout_alignStart="@+id/pUniv" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:textSize="20dp"
@@ -73,7 +73,7 @@
         android:layout_toRightOf="@+id/textView9"
         android:layout_toEndOf="@+id/textView9" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:textSize="20dp"
@@ -83,7 +83,7 @@
         android:layout_alignLeft="@+id/pIntro"
         android:layout_alignStart="@+id/pIntro" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:gravity="top"
@@ -95,7 +95,7 @@
         android:layout_below="@+id/textView8"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:textSize="20dp"
@@ -105,7 +105,7 @@
         android:layout_alignLeft="@+id/pIntro"
         android:layout_alignStart="@+id/pIntro" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:gravity="top"
@@ -118,7 +118,7 @@
         android:layout_alignLeft="@+id/pIntro"
         android:layout_alignStart="@+id/pIntro" />
 
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:textColor="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="41.33dp"

@@ -20,7 +20,7 @@
             android:layout_marginLeft="16.47dp"
             android:layout_marginTop="13dp" />
 
-        <TextView
+        <com.ourincheon.wazap.NotoTextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -59,7 +59,7 @@
         android:id="@+id/titleLayout"
         android:layout_below="@+id/linearLayout5">
 
-        <TextView
+        <com.ourincheon.wazap.NotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="D - 23"
@@ -69,7 +69,7 @@
             android:textSize="13dp"
             android:id="@+id/jmDate" />
 
-        <TextView
+        <com.ourincheon.wazap.NotoTextView
             android:id="@+id/jmTitle"
             android:hint="title"
             android:textSize="17dp"
@@ -110,7 +110,7 @@
                 android:layout_marginTop="29.33dp"
                 android:layout_marginLeft="18.67dp" />
 
-            <TextView
+            <com.ourincheon.wazap.NotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="변요한"
@@ -131,7 +131,7 @@
                     android:layout_marginTop="8dp"
                     android:background="@drawable/kakaotalk_icon"/>
 
-                <TextView
+                <com.ourincheon.wazap.NotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="dudeh534"
@@ -140,7 +140,7 @@
                     android:layout_marginTop="8dp" />
             </LinearLayout>
 
-            <TextView
+            <com.ourincheon.wazap.NotoTextView
                 android:layout_width="65.67dp"
                 android:layout_height="20dp"
                 android:text="상세프로필"
@@ -154,7 +154,7 @@
             android:layout_width="88dp"
             android:layout_height="match_parent">
 
-            <TextView
+            <com.ourincheon.wazap.NotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="공모전 명칭"
@@ -163,7 +163,7 @@
                 android:layout_marginTop="26.33dp"
                 android:textSize="13dp" />
 
-            <TextView
+            <com.ourincheon.wazap.NotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="카테고리"
@@ -171,7 +171,7 @@
                 android:layout_gravity="left|center_horizontal"
                 android:layout_marginTop="18.67dp" />
 
-            <TextView
+            <com.ourincheon.wazap.NotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="모집인원"
@@ -179,7 +179,7 @@
                 android:layout_gravity="left|center_horizontal"
                 android:layout_marginTop="18.67dp" />
 
-            <TextView
+            <com.ourincheon.wazap.NotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="팀원리스트"
@@ -187,7 +187,7 @@
                 android:layout_gravity="left|center_horizontal"
                 android:layout_marginTop="18.67dp" />
 
-            <TextView
+            <com.ourincheon.wazap.NotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="신청인원"
@@ -201,7 +201,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
+            <com.ourincheon.wazap.NotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="레드닷 어워즈"
@@ -230,7 +230,7 @@
                     android:id="@+id/imageView8" />
             </LinearLayout>
 
-            <TextView
+            <com.ourincheon.wazap.NotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="디자인"
@@ -270,7 +270,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <com.ourincheon.wazap.NotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
@@ -278,7 +278,7 @@
                     android:layout_marginTop="18.67dp"
                     android:textSize="14dp" />
 
-                <TextView
+                <com.ourincheon.wazap.NotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" / 3"
@@ -287,7 +287,7 @@
                     android:textSize="14dp" />
             </LinearLayout>
 
-            <TextView
+            <com.ourincheon.wazap.NotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="홍수민, 채영도"
@@ -295,7 +295,7 @@
                 android:layout_marginTop="18.67dp"
                 android:textSize="14dp" />
 
-            <TextView
+            <com.ourincheon.wazap.NotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="27"
@@ -320,7 +320,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <TextView
+        <com.ourincheon.wazap.NotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="소개"
@@ -342,7 +342,7 @@
 
         </FrameLayout>
 
-        <TextView
+        <com.ourincheon.wazap.NotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="같이 레드닷 어워즈 함께할 팀원을 구합니다 파티원 구해요 같이 할분 구합니다             같이 레드닷 어워즈 함께할 팀원을 구합니다 파티원 구해요 같이 할분 구합니다 같이 레드닷 어워즈 함께할 팀원을 구합니다 파티원 구해요 같이 할분 구합니다 같이 레드닷 어워즈 함께할 팀원을 구합니다 파티원 구해요 같이 할분 구합니다 같이 레드닷 어워즈 함께할 팀원을 구합니다 파티원 구해요 같이 할분 구합니다"
@@ -355,7 +355,7 @@
             android:textSize="13dp"
             android:textColor="#363636" />
 
-        <TextView
+        <com.ourincheon.wazap.NotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="신청자보기"
@@ -369,7 +369,7 @@
             android:layout_alignEnd="@+id/frameLayout" />
 
     </RelativeLayout>
-    <TextView
+    <com.ourincheon.wazap.NotoTextView
         android:textColor="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="41.33dp"

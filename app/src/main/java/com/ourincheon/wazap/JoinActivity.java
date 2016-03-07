@@ -55,10 +55,12 @@ public class JoinActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         num =  intent.getExtras().getString("id");
-        loadPage(num);
 
         SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
         access_token = pref.getString("access_token", "");
+
+        loadPage(num);
+
 
         jBefore = (Button) findViewById(R.id.jBefore);
         jBefore.setOnClickListener(new View.OnClickListener() {
@@ -192,7 +194,7 @@ public class JoinActivity extends AppCompatActivity {
 
         WazapService service = retrofit.create(WazapService.class);
 
-        Call<reqContest> call = service.getConInfo(num);
+        Call<reqContest> call = service.getConInfo(num,access_token);
         call.enqueue(new Callback<reqContest>() {
             @Override
             public void onResponse(Response<reqContest> response) {
@@ -211,7 +213,7 @@ public class JoinActivity extends AppCompatActivity {
                     jRec.setText(" / "+String.valueOf(contest.getData().getRecruitment()));
                     jName.setText(contest.getData().getUsername());
                     jCover.setText(contest.getData().getCover());
-                    jHost.setText(contest.getData().getCover());
+                    jHost.setText(contest.getData().getHosts());
 
                     String[] parts = contest.getData().getPeriod().split("T");
                     Dday day = new Dday();

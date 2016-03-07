@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:background="#0057ff" />
 
-        <TextView
+        <com.ourincheon.wazap.NotoTextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -52,12 +52,12 @@
             android:orientation="horizontal"
             android:padding="1dp">
 
-            <TextView
+            <com.ourincheon.wazap.NotoTextView
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="함께하고 사람을 선택하세"
+                android:text="함께하고 사람을 선택하세요"
                 android:textColor="#0057ff"
                 android:textSize="13dp"
                 android:textStyle="bold" />
